@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CenterActivityIndicator.MainPage">
+    <Grid>
+        <StackLayout> <!-- All content view in this StackLayout :D -->
+            <Grid VerticalOptions="FillAndExpand">
+                <Image Source="image.jpg" Aspect="Fill" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+                <StackLayout Padding="5">
+                    <Label Text="Centering an ActivityIndicator on Xamarin Forms" HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand" FontSize="Large" HorizontalTextAlignment="Center" TextColor="WhiteSmoke" />
+                    <Button Text="Reload" VerticalOptions="EndAndExpand" BackgroundColor="BlueViolet" TextColor="WhiteSmoke"
+                            Margin="50" Clicked="OnButtonClicked" />
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+        <ActivityIndicator
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="CenterAndExpand"
+            IsVisible="False"
+            IsRunning="True"
+            Color="WhiteSmoke"
+            x:Name="ActivityIndicator"/>
+    </Grid>
+</ContentPage>
